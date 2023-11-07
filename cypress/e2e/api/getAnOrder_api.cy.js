@@ -1,6 +1,6 @@
 const accessToken = `Bearer ${Cypress.env('api_access_token')}`
 describe('Get An Order', () => {
-    it('successfully', () => {
+    it('successfully Get An Order', () => {
         cy.request({
             method: 'GET',
             url: "https://simple-books-api.glitch.me/orders/Z3Ok6mb4p1jwo0iGrev6g",

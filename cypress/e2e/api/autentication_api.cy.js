@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker'
 describe('Autentication', () => {
-    it('', () => {
+    it('authenticate to the system successfully', () => {
         const token = {
             "clientName": faker.name.findName(),
             "clientEmail": faker.internet.email(),
