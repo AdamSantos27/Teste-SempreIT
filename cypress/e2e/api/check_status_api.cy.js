@@ -1,5 +1,5 @@
-describe('Verifica status', () => {
-  it('verificar status da api', () => {
+describe('Check status', () => {
+  it('check api status', () => {
     cy.request({
       method: 'GET',
       url: "https://simple-books-api.glitch.me/status",

@@ -1,11 +1,11 @@
 describe('Send Orders', () => {
     it('successfully', () => {
 
-        const order = {
+        const sendorder = {
 
         }
 
-        cy.api_sendOrder(order)
+        cy.api_sendOrder(sendorder)
             .then(response => {
                 expect(response.status).to.equal(201)
                 expect(response.body.created).to.equal(true)
@@ -13,3 +13,5 @@ describe('Send Orders', () => {
             })
     })
 })
+
+let orderID
