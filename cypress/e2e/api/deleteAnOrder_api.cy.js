@@ -17,7 +17,7 @@ describe('Deletar um pedido', () => {
     })
 
     it('Deve deletar um pedido com sucesso', () => {
-        
+
         cy.request({
             method: 'DELETE',
             url: `https://simple-books-api.glitch.me/orders/${firstOrderID}`,

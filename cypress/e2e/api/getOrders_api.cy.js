@@ -10,7 +10,7 @@ describe('buscar pedidos', () => {
             .then(response => {
                 const responseBody = response.body
                 expect(response.status).to.equal(200)
-               
+
             })
     })
 })
