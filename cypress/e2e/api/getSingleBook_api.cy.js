@@ -1,5 +1,5 @@
-describe('get book 1', () => {
-    it('successfully get book 1', () => {
+describe('Buscar por um livro', () => {
+    it('Buscar por um livro com sucesso', () => {
         cy.request({
             method: 'GET',
             url: "https://simple-books-api.glitch.me/books/1",

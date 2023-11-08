@@ -1,9 +1,7 @@
-describe('Send Orders', () => {
-    it('successfully Send Orders', () => {
+describe('Enviar Pedido', () => {
+    it('Enviar Pedido com sucesso', () => {
 
-        const sendorder = {
-
-        }
+        const sendorder = {}
 
         cy.api_sendOrder(sendorder)
             .then(response => {
@@ -13,5 +11,3 @@ describe('Send Orders', () => {
             })
     })
 })
-
-let orderID
