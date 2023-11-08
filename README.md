@@ -1,3 +1,26 @@
+#CYPRESS
+
+## Pré requisitos
+
+É necessário ter Node.js e npm instalados para executar este projeto.
+
+> Usei as versões `v16.20.2` e `8.19.4` do Node.js e npm, respectivamente. Eu sugiro que você use as mesmas versões ou versões posteriores.
+
+## Instalação
+
+Execute `npm install` (ou `npm i` para a versão curta) para instalar as dependências de desenvolvimento.
+
+## Testes
+
+Você pode executar os testes simulando uma janela de visualização de desktop ou móvel.
+
+### Área de Trabalho
+Execute `npm test` (ou `npm t` para a versão curta) para executar o teste no modo headless em uma janela de visualização de desktop.
+
+
+
+
+
  # 👋 Introduction to Postman course
 
 Hello and welcome to this free course on writing API tests with Postman. 
