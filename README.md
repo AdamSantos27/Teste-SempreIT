@@ -4,15 +4,19 @@
 
 É necessário ter Node.js e npm instalados para executar este projeto.
 
-> Usei as versões `v16.20.2` e `8.19.4` do Node.js e npm, respectivamente. Eu sugiro que você use as mesmas versões ou versões posteriores.
+> Usei as versões `cypress@12.0.2` `v16.20.2` e `8.19.4` do Cypress, Node.js e npm, respectivamente. Eu sugiro que você use as mesmas versões ou versões posteriores.
 
 ## Instalação
 
 Execute `npm install` (ou `npm i` para a versão curta) para instalar as dependências de desenvolvimento.
 
+## Dependencias
+
+cypress-plugin-api@2.6.1 faker-js 7.6.0
+
 ## Testes
 
-Você pode executar os testes simulando uma janela de visualização de desktop ou móvel.
+Você pode executar os testes simulando uma janela de visualização de desktop.
 
 ### Área de Trabalho
 Execute `npm test` (ou `npm t` para a versão curta) para executar o teste no modo headless em uma janela de visualização de desktop.
