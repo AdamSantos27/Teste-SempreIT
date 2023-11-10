@@ -9,7 +9,6 @@ describe('Autenticação no sistema', () => {
             .then(response => {
                 const responseBody = response.body
                 expect(response.status).to.equal(201)
-                //expect(response.body.accessToken).to.string()
             })
     })
 
