@@ -1,34 +1,21 @@
 const accessToken = `Bearer ${Cypress.env('api_access_token')}`
+const costumerName = `${Cypress.env('costumerName')}`
 describe('buscar um livro', () => {
 
     let firstOrderID
 
     beforeEach(() => {
-        cy.request({
-            method: 'GET',
-            url: 'https://simple-books-api.glitch.me/orders',
-            headers: { Authorization: accessToken },
-        }).then(response => {
-            const responseBody = response.body;
-            expect(response.status).to.equal(200);
-            expect(responseBody).to.be.an('array').and.to.have.length.greaterThan(0)
-            firstOrderID = responseBody[0].id
-        })
+    cy.api_sendOrder()
     })
 
     it('Buscar um livro com sucesso', () => {
 
-        cy.request({
-            method: 'GET',
-            url: `https://simple-books-api.glitch.me/orders/${firstOrderID}`,
-            body: {},
-            headers: { Authorization: accessToken },
-        })
+        cy.api_sendOrder()
             .then(response => {
                 const responseBody = response.body
-                expect(response.status).to.equal(200)
+                expect(response.status).to.equal(201)
                 expect(response.body.id).to.equal(firstOrderID)
-                expect(response.body.customerName).to.equal(Cypress.env('costumerName'))
+                expect(response.body.customerName).to.equal(Cypress.env(costumerName))
 
             })
     })

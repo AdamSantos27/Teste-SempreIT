@@ -1,4 +1,5 @@
 const accessToken = `Bearer ${Cypress.env('api_access_token')}`
+const API_URL = Cypress.env('API_URL')
 
 Cypress.Commands.add('api_sendOrder', sendorder => {
 
@@ -6,7 +7,7 @@ Cypress.Commands.add('api_sendOrder', sendorder => {
 
   cy.request({
     method: 'POST',
-    url: "https://simple-books-api.glitch.me/orders",
+    url: `${API_URL}orders`,
     body: {
 
       "bookId": bookId,
@@ -22,7 +23,7 @@ Cypress.Commands.add('api_sendOrder', sendorder => {
 Cypress.Commands.add('api_autenticationToken', token => {
   cy.request({
     method: 'POST',
-    url: "https://simple-books-api.glitch.me/api-clients/",
+    url: `${API_URL}api-clients/`,
     body: {
 
       "clientName": token.clientName,

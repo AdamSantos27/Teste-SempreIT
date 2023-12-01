@@ -1,8 +1,11 @@
 describe('Checar status da api', () => {
+
+const API_URL = Cypress.env('API_URL')
+
   it('Deve checar api status com sucesso', () => {
     cy.request({
       method: 'GET',
-      url: "https://simple-books-api.glitch.me/status",
+      url: `${API_URL}status`,
       body: {}
     })
       .then(response => {

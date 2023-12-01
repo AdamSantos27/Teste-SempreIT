@@ -1,8 +1,11 @@
 describe('Buscar por um livro', () => {
+
+    const API_URL = Cypress.env('API_URL')
+
     it('Buscar por um livro com sucesso', () => {
         cy.request({
             method: 'GET',
-            url: "https://simple-books-api.glitch.me/books/1",
+            url: `${API_URL}books/1`,
             body: {}
         })
             .then(response => {

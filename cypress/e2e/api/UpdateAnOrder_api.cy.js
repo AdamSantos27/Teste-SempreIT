@@ -1,4 +1,6 @@
 const accessToken = `Bearer ${Cypress.env('api_access_token')}`
+const API_URL = Cypress.env('API_URL')
+
 describe('atualizar Pedido', () => {
 
     let firstOrderID
@@ -6,7 +8,7 @@ describe('atualizar Pedido', () => {
     beforeEach(() => {
         cy.request({
             method: 'GET',
-            url: 'https://simple-books-api.glitch.me/orders',
+            url: `${API_URL}orders`,
             headers: { Authorization: accessToken },
         }).then(response => {
             const responseBody = response.body;
@@ -19,7 +21,7 @@ describe('atualizar Pedido', () => {
     it('Atualizar nome do pedido com sucesso', () => {
         cy.request({
             method: 'PATCH',
-            url: `https://simple-books-api.glitch.me/orders/${firstOrderID}`,
+            url: `${API_URL}orders/${firstOrderID}`,
             body: {
 
                 "customerName": "John"
